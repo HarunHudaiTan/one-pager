@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harun Hüdai Tan</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: #11151c;
+    color: #e5e5e5;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: #fff; }
+
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 80px 24px 120px;
+  }
+
+  .navbar {
+    position: sticky;
+    top: 20px;
+    z-index: 90;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: fit-content;
+    margin-bottom: 40px;
+    padding: 10px 14px;
+    border: 1px solid #232833;
+    border-radius: 999px;
+    background: rgba(20, 24, 32, 0.82);
+    backdrop-filter: blur(12px);
+  }
+
+  .nav-link {
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    color: #9ca3af;
+    transition: color 0.2s ease;
+  }
+
+  .nav-link:hover {
+    color: #fff;
+  }
+
+  /* HEADER */
+  .header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 228px;
+    gap: 28px;
+    align-items: start;
+    margin-bottom: 64px;
+  }
+
+  .header-copy {
+    min-width: 0;
+  }
+
+  .profile-wrap {
+    display: flex;
+    justify-content: center;
+  }
+
+  .profile-photo {
+    width: 208px;
+    height: 208px;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 1px solid #1e1e1e;
+    background: #0a0a0a;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  }
+
+  .name {
+    font-size: 36px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+  }
+
+  .title {
+    font-size: 15px;
+    color: #b8b8c8;
+    margin-bottom: 20px;
+  }
+
+  .links {
+    display: flex;
+    gap: 20px;
+    font-size: 15px;
+    color: #999;
+    flex-wrap: wrap;
+  }
+
+  .links a {
+    color: #999;
+    transition: color 0.2s;
+  }
+
+  .links a:hover { color: #fff; }
+
+  .links span { color: #333; }
+
+  /* LANG TOGGLE */
+  .lang-toggle {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    display: flex;
+    gap: 4px;
+    z-index: 100;
+  }
+
+  .lang-btn {
+    background: none;
+    border: 1px solid #333;
+    color: #999;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s;
+  }
+
+  .lang-btn.active {
+    border-color: #999;
+    color: #fff;
+  }
+
+  /* SECTIONS */
+  .section { margin-bottom: 52px; }
+
+  .section-label {
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #686880;
+    margin-bottom: 24px;
+  }
+
+
+  .bio {
+    font-size: 21px;
+    color: #c8c8d4;
+    margin-bottom: 18px;
+    line-height: 1.5;
+  }
+  /* ABOUT */
+  .about-text {
+    font-size: 18px;
+    color: #c8c8d0;
+    line-height: 1.85;
+  }
+
+  /* EXPERIENCE */
+  .item { margin-bottom: 28px; }
+
+  .item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 4px;
+    gap: 12px;
+  }
+
+  .item-title {
+    font-size: 22px;
+    font-weight: 500;
+    color: #fff;
+  }
+
+  .item-date {
+    font-size: 16px;
+    color: #909090;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .item-subtitle {
+    font-size: 17px;
+    color: #999;
+    margin-bottom: 10px;
+  }
+
+  .item-desc {
+    font-size: 18px;
+    color: #b8b8c8;
+    line-height: 1.8;
+  }
+
+  .item-tags {
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .tag {
+    font-size: 11px;
+    color: #aaa;
+    border: 1px solid #2a2a2a;
+    padding: 2px 8px;
+    border-radius: 3px;
+  }
+
+  /* PUBLICATIONS */
+  .pub { margin-bottom: 24px; }
+
+  .pub-title {
+    font-size: 21px;
+    font-weight: 500;
+    color: #eee;
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+
+  .pub-meta {
+    font-size: 16px;
+    color: #999;
+    margin-bottom: 6px;
+  }
+
+  .pub-link {
+    font-size: 14px;
+    color: #909090;
+    border-bottom: 1px solid #444;
+    padding-bottom: 1px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .pub-link:hover {
+    color: #c8c8d0;
+    border-color: #999;
+  }
+
+  /* DIVIDER */
+  .divider {
+    height: 1px;
+    background: #1a1a1a;
+    margin-bottom: 52px;
+  }
+
+  /* EDUCATION */
+  .edu-title {
+    font-size: 22px;
+    font-weight: 500;
+    color: #fff;
+  }
+
+  .edu-sub {
+    font-size: 16px;
+    color: #999;
+    margin-top: 2px;
+  }
+
+  /* FOOTER */
+  .footer {
+    margin-top: 80px;
+    padding-top: 24px;
+    border-top: 1px solid #1a1a1a;
+    font-size: 14px;
+    color: #777;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  /* I18N */
+  [data-tr] { display: none; }
+  body.tr [data-en] { display: none; }
+  body.tr [data-tr] { display: block; }
+  body.tr span[data-tr] { display: inline; }
+  body.tr span[data-en] { display: none; }
+
+  @media (max-width: 480px) {
+    .container { padding: 60px 20px 80px; }
+    .navbar {
+      top: 16px;
+      gap: 8px;
+      margin-bottom: 28px;
+      padding: 9px 12px;
+    }
+    .nav-link {
+      font-size: 12px;
+    }
+    .header {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .profile-wrap {
+      justify-content: flex-start;
+      order: -1;
+    }
+    .profile-photo {
+      width: 136px;
+      height: 136px;
+      border-radius: 14px;
+    }
+    .item-header { flex-direction: column; gap: 2px; }
+    .name { font-size: 30px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="lang-toggle">
+  <button class="lang-btn active" onclick="setLang('en')">EN</button>
+  <button class="lang-btn" onclick="setLang('tr')">TR</button>
+</div>
+
+<div class="container">
+
+  <div class="navbar">
+    <a class="nav-link" href="#about">
+      <span data-en>About</span>
+      <span data-tr>Hakkımda</span>
+    </a>
+    <a class="nav-link" href="#experience">
+      <span data-en>Experience</span>
+      <span data-tr>Deneyim</span>
+    </a>
+    <a class="nav-link" href="#publications">
+      <span data-en>Publications</span>
+      <span data-tr>Yayınlar</span>
+    </a>
+    <a class="nav-link" href="#projects">
+      <span data-en>Projects</span>
+      <span data-tr>Projeler</span>
+    </a>
+    <a class="nav-link" href="#education">
+      <span data-en>Education</span>
+      <span data-tr>Eğitim</span>
+    </a>
+  </div>
+
+  <!-- HEADER -->
+  <div class="header" id="about">
+    <div class="header-copy">
+      <div class="name">Harun Hüdai Tan</div>
+      <div class="bio" data-en>Software Engineer specialized in autonomous agentic workflows and AI-driven cybersecurity.</div>
+      <div class="bio" data-tr>Otonom ajan iş akışları ve yapay zeka destekli siber güvenlik üzerine uzmanlaşan yazılım mühendisi.</div>
+      <p class="about-text" data-en>
+        I design and build AI systems for autonomous decision-making and security-critical workflows. Currently at s4e.io, I build agentic threat analysis pipelines. My focus is on the intersection of LLM security and automated incident response.
+      </p>
+      <p class="about-text" data-tr>
+        Basit sohbet arayüzlerinin ötesine geçen, otonom karar verme yetisine sahip yapay zeka sistemleri tasarlıyorum. Şu an s4e.io bünyesinde, ajansal tehdit analiz pipeline'ları ve güvenli RAG mimarileri üzerine çalışıyorum. Odak noktam, LLM güvenliği ve otomatik olay müdahalesi arasındaki kesişim kümesidir.
+      </p>
+      <div class="links">
+        <a href="mailto:harunhudaitan@gmail.com">harunhudaitan@gmail.com</a>
+        <span>·</span>
+        <a href="https://github.com/HarunHudaiTan" target="_blank">GitHub</a>
+        <span>·</span>
+        <a href="https://linkedin.com/in/harun-hüdai-tan" target="_blank">LinkedIn</a>
+        <span>·</span>
+        <span>Ankara, TR</span>
+      </div>
+    </div>
+    <div class="profile-wrap">
+      <img class="profile-photo" src="images/profile.png" alt="Portrait of Harun Hüdai Tan">
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- EXPERIENCE -->
+  <div class="section" id="experience">
+    <div class="section-label">
+      <span data-en>Experience</span>
+      <span data-tr>Deneyim</span>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <div class="item-title">s4e.io</div>
+        <div class="item-date">
+          <span data-en>Nov 2025 – Present</span>
+          <span data-tr>Kas 2025 – Devam</span>
+        </div>
+      </div>
+      <div class="item-subtitle">
+        <span data-en>Software Engineer Intern</span>
+        <span data-tr>Yazılım Mühendisi Stajyeri</span>
+      </div>
+      <div class="item-desc" data-en>
+        Developing infrastructure security platforms and autonomous agents designed for proactive vulnerability remediation. Focusing on agentic orchestration to minimize mean time to respond (MTTR) in complex security environments.
+      </div>
+      <div class="item-desc" data-tr>
+        Proaktif zafiyet giderme için tasarlanmış altyapı güvenlik platformları ve otonom ajanlar üzerinde çalışıyorum. Karmaşık güvenlik ortamlarında müdahale süresini (MTTR) minimize etmek için ajansal orkestrasyona odaklanıyorum.
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <div class="item-title">Northsoft.co</div>
+        <div class="item-date">Jul 2025 – Sep 2025</div>
+      </div>
+      <div class="item-subtitle">
+        <span data-en>Software Engineer Intern</span>
+        <span data-tr>Yazılım Mühendisi Stajyeri</span>
+      </div>
+      <div class="item-desc" data-en>
+        Built an academic research assistant for chatting with papers. Used RAG, semantic chunking, hybrid retrieval, and the Gemini API.
+      </div>
+      <div class="item-desc" data-tr>
+        Makalelerle sohbet etmeyi mümkün kılan bir akademik araştırma asistanı geliştirdim. RAG, semantik parçalama, hibrit erişim ve Gemini API kullandım.
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <div class="item-title">TÜBİTAK Space Technologies Research Institute</div>
+        <div class="item-date">Jun 2024 – Jul 2024</div>
+      </div>
+      <div class="item-subtitle">
+        <span data-en>Software Engineer Intern</span>
+        <span data-tr>Yazılım Mühendisi Stajyeri</span>
+      </div>
+      <div class="item-desc" data-en>
+        Added new features to an existing full-stack HR platform and worked as part of the development team.
+      </div>
+      <div class="item-desc" data-tr>
+        Mevcut bir full-stack İK platformuna yeni özellikler ekledim ve geliştirme ekibinin bir parçası olarak çalıştım.
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- PUBLICATIONS -->
+  <div class="section" id="publications">
+    <div class="section-label">
+      <span data-en>Publications</span>
+      <span data-tr>Yayınlar</span>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">Hypothetica: A Multi-Agent System for AI-Powered Originality Assessment</div>
+      <div class="pub-meta">
+        <span data-en>Harun Hüdai Tan, Ahmet Alp Malkoç, Kutay Becerir, Baran Erol, Murat Karakaya</span>
+        <span data-tr>Harun Hüdai Tan, Ahmet Alp Malkoç, Kutay Becerir, Baran Erol, Murat Karakaya</span>
+      </div>
+      <div class="pub-meta" style="color:#555;">
+        <span data-en>2026 5th International Informatics and Software Engineering Conference (IISEC) · Feb 2026 · IEEE</span>
+        <span data-tr>2026 5. Uluslararası Bilişim ve Yazılım Mühendisliği Konferansı (IISEC) · Şub 2026 · IEEE</span>
+      </div>
+      <a class="pub-link" href="https://ieeexplore.ieee.org/abstract/document/11418474" target="_blank">
+        <span data-en>View on IEEE Xplore →</span>
+        <span data-tr>IEEE Xplore'da Görüntüle →</span>
+      </a>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">AI-Powered Regional Cost of Living Advisor for Turkey</div>
+      <div class="pub-meta">Harun Hüdai Tan, Kasım Murat Karakaya, Ahmet Arda Bağdatlı, Baran Erol, Hüseyin Yiğit Erten</div>
+      <div class="pub-meta" style="color:#555;">
+        <span data-en>10th International Conference on Computer Science and Engineering (UBMK 2025) · Sep 2025</span>
+        <span data-tr>10. Uluslararası Bilgisayar Bilimi ve Mühendisliği Konferansı (UBMK 2025) · Eyl 2025</span>
+      </div>
+      <a class="pub-link" href="https://ieeexplore.ieee.org/abstract/document/11206933" target="_blank">
+        <span data-en>View on IEEE Xplore →</span>
+        <span data-tr>IEEE Xplore'da Görüntüle →</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- PROJECTS -->
+  <div class="section" id="projects">
+    <div class="section-label">
+      <span data-en>Projects</span>
+      <span data-tr>Projeler</span>
+    </div>
+
+    <div class="item">
+      <div class="item-title" style="margin-bottom:4px;">Hypothetica</div>
+      <div class="item-desc" data-en>A three-tier multi-agent system that quantifies the originality of research ideas. It uses RAG to cross-reference academic literature from arXiv, providing researchers with automated feasibility and novelty assessments. Accepted for presentation at IISEC 2026.</div>
+      <div class="item-desc" data-tr>Araştırma fikirlerinin özgünlüğünü puanlayan üç katmanlı bir çok ajanlı sistem. arXiv üzerindeki akademik literatürü RAG ile tarayarak araştırmacılara otonom fizibilite ve yenilik analizi sunar. IISEC 2026 konferansında sunulmak üzere kabul edilmiştir.</div>
+    </div>
+
+    <div class="item">
+      <div class="item-title" style="margin-bottom:4px;">
+        <span data-en>AI-Based Relocation Assistant</span>
+        <span data-tr>Yapay Zeka Destekli Yerleşim Danışmanı</span>
+      </div>
+      <div class="item-desc" data-en>An LLM-based decision support system that synthesizes web-scraped city data to provide regional cost-of-living analysis. Published at UBMK 2025 and invited for extension in a special issue journal.</div>
+      <div class="item-desc" data-tr>Şehir verilerini web scraping ile toplayan ve bölgesel yaşam maliyeti analizi sunan LLM tabanlı bir karar destek sistemi. UBMK 2025'te yayınlanmış ve özel bir dergi sayısı için genişletilmek üzere davet almıştır.</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- EDUCATION -->
+  <div class="section" id="education">
+    <div class="section-label">
+      <span data-en>Education</span>
+      <span data-tr>Eğitim</span>
+    </div>
+    <div class="item-header">
+      <div>
+        <div class="edu-title">TED University</div>
+        <div class="edu-sub">
+          <span data-en>B.Sc. Software Engineering · 100% English · Ankara</span>
+          <span data-tr>Yazılım Mühendisliği Lisans · %100 İngilizce · Ankara</span>
+        </div>
+      </div>
+      <div class="item-date">2022 – 2026</div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <span>Harun Hüdai Tan · 2026</span>
+    <a href="mailto:harunhudaitan@gmail.com">harunhudaitan@gmail.com</a>
+  </div>
+
+</div>
+
+<script>
+  function setLang(lang) {
+    document.body.className = lang === 'tr' ? 'tr' : '';
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.textContent === lang.toUpperCase());
+    });
+  }
+</script>
+
+</body>
+</html>
