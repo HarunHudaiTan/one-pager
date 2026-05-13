@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Harun Hüdai Tan</title>
+<title>Harun Hüdai Tan | Software Engineer</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -11,20 +11,20 @@
   html { scroll-behavior: smooth; }
 
   body {
-    background: #11151c;
-    color: #e5e5e5;
+    background: #0f1217;
+    color: #e7e9ee;
     font-family: 'Inter', sans-serif;
     font-weight: 300;
-    line-height: 1.7;
+    line-height: 1.65;
   }
 
   a { color: inherit; text-decoration: none; }
   a:hover { color: #fff; }
 
   .container {
-    max-width: 760px;
+    max-width: 940px;
     margin: 0 auto;
-    padding: 80px 24px 120px;
+    padding: 72px 24px 112px;
   }
 
   .navbar {
@@ -33,88 +33,26 @@
     z-index: 90;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     flex-wrap: wrap;
     width: fit-content;
-    margin-bottom: 40px;
+    margin-bottom: 52px;
     padding: 10px 14px;
-    border: 1px solid #232833;
+    border: 1px solid #252b36;
     border-radius: 999px;
-    background: rgba(20, 24, 32, 0.82);
+    background: rgba(15, 18, 23, 0.86);
     backdrop-filter: blur(12px);
   }
 
   .nav-link {
     font-size: 13px;
-    letter-spacing: 0.04em;
-    color: #9ca3af;
+    letter-spacing: 0;
+    color: #9aa3b2;
     transition: color 0.2s ease;
   }
 
-  .nav-link:hover {
-    color: #fff;
-  }
+  .nav-link:hover { color: #fff; }
 
-  /* HEADER */
-  .header {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 228px;
-    gap: 28px;
-    align-items: start;
-    margin-bottom: 64px;
-  }
-
-  .header-copy {
-    min-width: 0;
-  }
-
-  .profile-wrap {
-    display: flex;
-    justify-content: center;
-  }
-
-  .profile-photo {
-    width: 208px;
-    height: 208px;
-    object-fit: cover;
-    border-radius: 18px;
-    border: 1px solid #1e1e1e;
-    background: #0a0a0a;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
-  }
-
-  .name {
-    font-size: 36px;
-    font-weight: 600;
-    color: #fff;
-    margin-bottom: 12px;
-    letter-spacing: -0.5px;
-  }
-
-  .title {
-    font-size: 15px;
-    color: #b8b8c8;
-    margin-bottom: 20px;
-  }
-
-  .links {
-    display: flex;
-    gap: 20px;
-    font-size: 15px;
-    color: #999;
-    flex-wrap: wrap;
-  }
-
-  .links a {
-    color: #999;
-    transition: color 0.2s;
-  }
-
-  .links a:hover { color: #fff; }
-
-  .links span { color: #333; }
-
-  /* LANG TOGGLE */
   .lang-toggle {
     position: fixed;
     top: 24px;
@@ -125,9 +63,9 @@
   }
 
   .lang-btn {
-    background: none;
-    border: 1px solid #333;
-    color: #999;
+    background: #10141b;
+    border: 1px solid #303746;
+    color: #9aa3b2;
     padding: 6px 12px;
     font-size: 13px;
     font-family: 'Inter', sans-serif;
@@ -137,171 +75,321 @@
   }
 
   .lang-btn.active {
-    border-color: #999;
+    border-color: #8993a5;
     color: #fff;
   }
 
-  /* SECTIONS */
-  .section { margin-bottom: 52px; }
+  .header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 220px;
+    gap: 36px;
+    align-items: start;
+    margin-bottom: 58px;
+  }
 
-  .section-label {
+  .profile-wrap { display: flex; justify-content: center; }
+
+  .profile-photo {
+    width: 208px;
+    height: 208px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid #252b36;
+    background: #0a0d12;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.32);
+  }
+
+  .eyebrow {
+    margin-bottom: 12px;
+    color: #9aa3b2;
     font-size: 13px;
     font-weight: 500;
+    letter-spacing: 0;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: #686880;
-    margin-bottom: 24px;
   }
 
+  .name {
+    font-size: 42px;
+    line-height: 1.08;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 14px;
+    letter-spacing: 0;
+  }
 
   .bio {
+    max-width: 660px;
     font-size: 21px;
-    color: #c8c8d4;
+    color: #cfd5df;
     margin-bottom: 18px;
-    line-height: 1.5;
-  }
-  /* ABOUT */
-  .about-text {
-    font-size: 18px;
-    color: #c8c8d0;
-    line-height: 1.85;
+    line-height: 1.45;
   }
 
-  /* EXPERIENCE */
-  .item { margin-bottom: 28px; }
+  .about-text {
+    max-width: 680px;
+    font-size: 16px;
+    color: #aeb7c6;
+    line-height: 1.75;
+    margin-bottom: 22px;
+  }
+
+  .links {
+    display: flex;
+    gap: 12px;
+    font-size: 14px;
+    color: #9aa3b2;
+    flex-wrap: wrap;
+  }
+
+  .links a {
+    color: #aeb7c6;
+    border-bottom: 1px solid #394253;
+    padding-bottom: 1px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .links a:hover {
+    color: #fff;
+    border-color: #9aa3b2;
+  }
+
+  .links span { color: #4f596a; }
+
+  .section {
+    padding-top: 2px;
+    margin-bottom: 56px;
+  }
+
+  .section-label {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    color: #70798a;
+    margin-bottom: 22px;
+  }
+
+  .divider {
+    height: 1px;
+    background: #202632;
+    margin-bottom: 52px;
+  }
+
+  .item { margin-bottom: 30px; }
 
   .item-header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    gap: 18px;
     margin-bottom: 4px;
-    gap: 12px;
   }
 
   .item-title {
-    font-size: 22px;
+    font-size: 21px;
     font-weight: 500;
     color: #fff;
+    line-height: 1.25;
   }
 
   .item-date {
-    font-size: 16px;
-    color: #909090;
+    font-size: 14px;
+    color: #8c96a8;
     white-space: nowrap;
     flex-shrink: 0;
   }
 
   .item-subtitle {
-    font-size: 17px;
-    color: #999;
-    margin-bottom: 10px;
+    font-size: 15px;
+    color: #9aa3b2;
+    margin-bottom: 9px;
   }
 
   .item-desc {
-    font-size: 18px;
-    color: #b8b8c8;
-    line-height: 1.8;
+    max-width: 780px;
+    font-size: 16px;
+    color: #b9c2d0;
+    line-height: 1.75;
   }
 
-  .item-tags {
-    margin-top: 8px;
+  .inline-link {
+    color: #cfd5df;
+    border-bottom: 1px solid #465063;
+    padding-bottom: 1px;
+  }
+
+  .inline-link:hover {
+    border-color: #aeb7c6;
+  }
+
+  .project {
+    border: 1px solid #252b36;
+    border-radius: 8px;
+    padding: 22px;
+    background: #111720;
+    margin-bottom: 20px;
+  }
+
+  .project-top {
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 16px;
+  }
+
+  .project-top > div:first-child {
+    min-width: 0;
+  }
+
+  .project-title {
+    font-size: 23px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+
+  .project-meta {
+    font-size: 14px;
+    color: #9aa3b2;
+  }
+
+  .project-stack {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #8f9bad;
+    line-height: 1.6;
+  }
+
+  .repo-links {
+    display: flex;
+    gap: 10px;
     flex-wrap: wrap;
-    gap: 6px;
+    align-items: center;
+    justify-content: flex-end;
+    min-width: 190px;
   }
 
-  .tag {
-    font-size: 11px;
-    color: #aaa;
-    border: 1px solid #2a2a2a;
-    padding: 2px 8px;
-    border-radius: 3px;
+  .repo-link {
+    font-size: 13px;
+    font-weight: 500;
+    color: #d5dbe5;
+    border: 1px solid #394253;
+    border-radius: 6px;
+    padding: 5px 9px;
+    white-space: nowrap;
+    transition: border-color 0.2s, color 0.2s, background 0.2s;
   }
 
-  /* PUBLICATIONS */
+  .repo-link:hover {
+    color: #fff;
+    border-color: #657087;
+    background: #151c27;
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+
+  .detail {
+    border-top: 1px solid #252b36;
+    padding-top: 12px;
+  }
+
+  .detail-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: #7f8a9d;
+    margin-bottom: 6px;
+  }
+
+  .detail p, .detail li {
+    font-size: 15px;
+    color: #b9c2d0;
+    line-height: 1.7;
+  }
+
+  .detail ul {
+    padding-left: 18px;
+  }
+
   .pub { margin-bottom: 24px; }
 
   .pub-title {
-    font-size: 21px;
+    font-size: 20px;
     font-weight: 500;
-    color: #eee;
+    color: #f1f3f7;
     margin-bottom: 8px;
-    line-height: 1.5;
+    line-height: 1.45;
   }
 
   .pub-meta {
-    font-size: 16px;
-    color: #999;
+    font-size: 15px;
+    color: #a0a9b8;
     margin-bottom: 6px;
   }
 
   .pub-link {
     font-size: 14px;
-    color: #909090;
-    border-bottom: 1px solid #444;
+    color: #c0c8d5;
+    border-bottom: 1px solid #465063;
     padding-bottom: 1px;
     transition: color 0.2s, border-color 0.2s;
   }
 
   .pub-link:hover {
-    color: #c8c8d0;
-    border-color: #999;
+    color: #fff;
+    border-color: #aeb7c6;
   }
 
-  /* DIVIDER */
-  .divider {
-    height: 1px;
-    background: #1a1a1a;
-    margin-bottom: 52px;
-  }
-
-  /* EDUCATION */
   .edu-title {
-    font-size: 22px;
+    font-size: 21px;
     font-weight: 500;
     color: #fff;
   }
 
   .edu-sub {
-    font-size: 16px;
-    color: #999;
+    font-size: 15px;
+    color: #a0a9b8;
     margin-top: 2px;
   }
 
-  /* FOOTER */
   .footer {
     margin-top: 80px;
     padding-top: 24px;
-    border-top: 1px solid #1a1a1a;
+    border-top: 1px solid #202632;
     font-size: 14px;
-    color: #777;
+    color: #7f8a9d;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 8px;
   }
 
-  /* I18N */
   [data-tr] { display: none; }
   body.tr [data-en] { display: none; }
   body.tr [data-tr] { display: block; }
   body.tr span[data-tr] { display: inline; }
   body.tr span[data-en] { display: none; }
 
-  @media (max-width: 480px) {
-    .container { padding: 60px 20px 80px; }
+  @media (max-width: 760px) {
+    .container { padding: 62px 20px 90px; }
     .navbar {
       top: 16px;
-      gap: 8px;
-      margin-bottom: 28px;
+      gap: 9px;
+      margin-bottom: 34px;
       padding: 9px 12px;
     }
-    .nav-link {
-      font-size: 12px;
-    }
+    .nav-link { font-size: 12px; }
     .header {
       grid-template-columns: 1fr;
-      gap: 20px;
+      gap: 22px;
+      margin-bottom: 46px;
     }
     .profile-wrap {
       justify-content: flex-start;
@@ -310,10 +398,22 @@
     .profile-photo {
       width: 136px;
       height: 136px;
-      border-radius: 14px;
+      border-radius: 10px;
     }
-    .item-header { flex-direction: column; gap: 2px; }
-    .name { font-size: 30px; }
+    .name { font-size: 34px; }
+    .bio { font-size: 19px; }
+    .item-header,
+    .project-top {
+      flex-direction: column;
+      gap: 6px;
+    }
+    .repo-links { justify-content: flex-start; }
+    .project-grid {
+      grid-template-columns: 1fr;
+    }
+    .project {
+      padding: 18px;
+    }
   }
 </style>
 </head>
@@ -335,13 +435,13 @@
       <span data-en>Experience</span>
       <span data-tr>Deneyim</span>
     </a>
+    <a class="nav-link" href="#projects">
+      <span data-en>Contributed Projects</span>
+      <span data-tr>Katkı Verilen Projeler</span>
+    </a>
     <a class="nav-link" href="#publications">
       <span data-en>Publications</span>
       <span data-tr>Yayınlar</span>
-    </a>
-    <a class="nav-link" href="#projects">
-      <span data-en>Projects</span>
-      <span data-tr>Projeler</span>
     </a>
     <a class="nav-link" href="#education">
       <span data-en>Education</span>
@@ -349,17 +449,20 @@
     </a>
   </div>
 
-  <!-- HEADER -->
-  <div class="header" id="about">
-    <div class="header-copy">
-      <div class="name">Harun Hüdai Tan</div>
-      <div class="bio" data-en>Software engineer building AI systems that act on security decisions, not just make them.</div>
-      <div class="bio" data-tr>Güvenlik kararlarını yalnızca önermekle kalmayıp, doğrudan uygulamaya geçiren yapay zeka sistemleri geliştiren bir yazılım mühendisi.</div>
+  <header class="header" id="about">
+    <div>
+      <div class="eyebrow">
+        <span data-en>Software Engineer</span>
+        <span data-tr>Yazılım Mühendisi</span>
+      </div>
+      <h1 class="name">Harun Hüdai Tan</h1>
+      <div class="bio" data-en>Software engineer focused on full-stack development, AI-powered applications, automation tooling, and distributed systems.</div>
+      <div class="bio" data-tr>Full-stack geliştirme, yapay zeka destekli uygulamalar ve otomasyon araçları üzerine çalışan yazılım mühendisi.</div>
       <p class="about-text" data-en>
-        I build AI systems that don't just detect security issues, but safely act on them. Most security systems focus on detection, while reliable and controlled execution is still evolving. My work focuses on this space, building agents and execution layers that apply security decisions in real-world systems. I also support my projects with research and continue developing them from an academic perspective.
+        I am a software engineer working on full-stack applications, backend systems, data retrieval, and AI integrations. I have built agent-based tools and product features across frontend and backend. I focus on turning ideas into clear, maintainable, and reliable software systems.
       </p>
       <p class="about-text" data-tr>
-        Güvenlik sorunlarını yalnızca tespit etmekle kalmayıp, güvenli şekilde aksiyona dönüştüren yapay zeka sistemleri geliştiriyorum. Günümüzde çoğu güvenlik sistemi tespit odaklıdır; ancak bu bulguları güvenilir ve kontrollü şekilde uygulayan çözümler hâlâ gelişmektedir. Benim çalışmalarım da bu alana odaklanır ve güvenlik kararlarını gerçek sistemlerde uygulayabilen ajanlar ile yürütme katmanları geliştirmeyi kapsar. Bunun yanında projelerimi araştırma ile destekliyor ve akademik olarak geliştirmeye devam ediyorum.
+        Full-stack uygulamalar, backend servisleri ve yapay zeka entegrasyonları geliştiriyorum. Backend ve frontend tarafını kapsayan ürün özellikleri ve ajan tabanlı araçlar üzerinde çalıştım. Özellikle güvenilir ve sürdürülebilir yazılım sistemleri geliştirmeye odaklanıyorum.
       </p>
       <div class="links">
         <a href="mailto:harunhudaitan@gmail.com">harunhudaitan@gmail.com</a>
@@ -374,12 +477,11 @@
     <div class="profile-wrap">
       <img class="profile-photo" src="images/profile.png" alt="Portrait of Harun Hüdai Tan">
     </div>
-  </div>
+  </header>
 
   <div class="divider"></div>
 
-  <!-- EXPERIENCE -->
-  <div class="section" id="experience">
+  <section class="section" id="experience">
     <div class="section-label">
       <span data-en>Experience</span>
       <span data-tr>Deneyim</span>
@@ -387,10 +489,10 @@
 
     <div class="item">
       <div class="item-header">
-        <div class="item-title">s4e.io</div>
+        <a class="item-title" href="https://s4e.io/" target="_blank">s4e.io -></a>
         <div class="item-date">
-          <span data-en>Nov 2025 – Present</span>
-          <span data-tr>Kas 2025 – Devam</span>
+          <span data-en>Nov 2025 - Present</span>
+          <span data-tr>Kas 2025 - Devam</span>
         </div>
       </div>
       <div class="item-subtitle">
@@ -398,52 +500,150 @@
         <span data-tr>Yazılım Mühendisi Stajyeri</span>
       </div>
       <div class="item-desc" data-en>
-        Built the execution layer for Opservant, an AI-driven platform that turns security findings into automated, playbook-based fixes. Designed the cross-platform Go agent (Opservant Spark) and the secure playbook pipeline with privilege validation, injection protection, and automatic rollback.
+        I worked on Opservant, a security automation platform that turns incoming security findings into executable response workflows (playbooks) and executes AI-powered autonomous actions in a controlled and auditable way.
+        <br><br>
+        I contributed to multiple parts of the platform, including both full-stack development and execution infrastructure. I worked on Spark, the cross-platform Go-based playbook execution agent running on macOS, Linux, and Windows, as well as backend and platform components responsible for playbook and agent management and communication between the management layer and execution agents. I also worked on human-in-the-loop execution workflows.
       </div>
       <div class="item-desc" data-tr>
-        Yapay zeka destekli Opservant platformunun yürütme katmanını geliştirdim. Bu platform, güvenlik bulgularını otomatik ve playbook tabanlı aksiyonlara dönüştürür. Çapraz platform çalışan Go tabanlı ajanı (Opservant Spark) tasarladım ve yetki doğrulama, komut enjeksiyonuna karşı koruma ve otomatik geri alma mekanizmalarını içeren güvenli bir playbook yürütme altyapısı geliştirdim.
+        Opservant üzerinde çalıştım. Opservant, sistemlerden gelen güvenlik bulgularını çalıştırılabilir müdahale senaryolarına (playbook) dönüştürerek yapay zeka destekli otonom aksiyonların kontrollü ve izlenebilir şekilde uygulanmasını sağlayan bir güvenlik otomasyon platformudur.
+        <br><br>
+        Platformun farklı bileşenlerinde hem full-stack geliştirme hem de yürütme altyapısı tarafında çalışmalar yaptım. macOS, Linux ve Windows üzerinde çalışan Spark isimli Go tabanlı playbook yürütme ajanı üzerinde çalışmanın yanı sıra, playbook ve ajan yönetimi ile yönetim katmanı ve yürütme ajanları arasındaki iletişimi sağlayan backend ve platform bileşenlerinin geliştirilmesine katkı sağladım. Ayrıca human-in-the-loop yürütme süreçleri üzerinde çalıştım.
       </div>
     </div>
 
     <div class="item">
       <div class="item-header">
-        <div class="item-title">Northsoft.co</div>
-        <div class="item-date">Jul 2025 – Sep 2025</div>
+        <a class="item-title" href="https://northsoft.co/" target="_blank">Northsoft.co -></a>
+        <div class="item-date">Jul 2025 - Sep 2025</div>
       </div>
       <div class="item-subtitle">
         <span data-en>Software Engineer Intern</span>
         <span data-tr>Yazılım Mühendisi Stajyeri</span>
       </div>
       <div class="item-desc" data-en>
-        Built an academic research assistant end-to-end (RAG pipeline, semantic chunking, hybrid retrieval, and Gemini API integration) that lets users chat with research papers.
+        Built backend features for an academic research assistant that lets users search and ask questions over research papers. Implemented document processing with semantic chunking, hybrid retrieval, and Gemini API integration to return context-aware answers from uploaded papers.
       </div>
       <div class="item-desc" data-tr>
-        Kullanıcıların akademik makalelerle etkileşim kurabildiği bir araştırma asistanını uçtan uca geliştirdim. Bu sistem; RAG pipeline, semantik parçalama, hibrit veri erişimi ve Gemini API entegrasyonunu içerir.
+        Kullanıcıların akademik makaleler üzerinde arama yapabildiği ve soru sorabildiği bir araştırma asistanı için backend özellikleri geliştirdim. Yüklenen makalelerden bağlama uygun yanıtlar üretmek için semantik parçalama, hibrit retrieval ve Gemini API entegrasyonu içeren doküman işleme akışı üzerinde çalıştım.
       </div>
     </div>
 
     <div class="item">
       <div class="item-header">
-        <div class="item-title">TÜBİTAK Space Technologies Research Institute</div>
-        <div class="item-date">Jun 2024 – Jul 2024</div>
+        <a class="item-title" href="https://uzay.tubitak.gov.tr/" target="_blank">TÜBİTAK Space Technologies Research Institute -></a>
+        <div class="item-date">Jun 2024 - Jul 2024</div>
       </div>
       <div class="item-subtitle">
         <span data-en>Software Engineer Intern</span>
         <span data-tr>Yazılım Mühendisi Stajyeri</span>
       </div>
       <div class="item-desc" data-en>
-        Added features to a full-stack HR platform built with Java Spring Boot and Angular, including job posting workflows and user activity tracking.
+        Developed full-stack features for a human resources platform, including job posting management, user activity tracking, and backend services. Worked across Angular components and Java Spring Boot services to support recruitment workflows.
       </div>
       <div class="item-desc" data-tr>
-        Java Spring Boot ve Angular ile geliştirilen bir İK platformuna yeni özellikler ekledim. İş ilanı süreçlerini yöneten akışlar ve kullanıcı aktivite takibi gibi sistemleri geliştirdim.
+        İnsan kaynakları platformu için iş ilanı yönetimi, kullanıcı aktivite takibi ve backend servisleri dahil full-stack özellikler geliştirdim. İşe alım süreçlerini desteklemek için Angular bileşenleri ve Java Spring Boot servisleri üzerinde çalıştım.
       </div>
     </div>
-  </div>
+  </section>
 
   <div class="divider"></div>
 
-  <!-- PUBLICATIONS -->
-  <div class="section" id="publications">
+  <section class="section" id="projects">
+    <div class="section-label">
+      <span data-en>Contributed Projects</span>
+      <span data-tr>Katkı Verilen Projeler</span>
+    </div>
+
+    <article class="project">
+      <div class="project-top">
+        <div>
+          <h2 class="project-title">Opservant Spark</h2>
+          <div class="project-meta" data-en>Open-source Go-based agent for running security playbooks that define the actions to run on target machines.</div>
+          <div class="project-meta" data-tr>Uygulanacak müdahale adımlarını tanımlayan güvenlik playbook'larını hedef makinelerde çalıştıran açık kaynak Go tabanlı ajan.</div>
+          <div class="project-stack">Go · structured remediation workflows · approval gates · command validation · audit logging · rollback</div>
+        </div>
+        <div class="repo-links">
+          <a class="repo-link" href="https://github.com/s4e-io/opservant-spark" target="_blank">Source</a>
+          <a class="repo-link" href="https://github.com/s4e-io/opservant-playbooks" target="_blank">Playbooks</a>
+        </div>
+      </div>
+
+      <div class="project-grid">
+        <div class="detail">
+          <div class="detail-label">
+            <span data-en>Built</span>
+            <span data-tr>Geliştirdiğim Kısım</span>
+          </div>
+          <p data-en>Built parts of the execution layer that checks whether playbooks are safe to run, executes them on target machines, records the results, and rolls back failed actions when needed.</p>
+          <p data-tr>Playbook'ların güvenli şekilde çalıştırılıp çalıştırılamayacağını kontrol eden, onları hedef makinelerde çalıştıran, sonuçları kaydeden ve gerektiğinde başarısız aksiyonları geri alan yürütme katmanı bileşenleri geliştirdim.</p>
+        </div>
+        <div class="detail">
+          <div class="detail-label">
+            <span data-en>Technical Highlights</span>
+            <span data-tr>Teknik Detaylar</span>
+          </div>
+          <ul data-en>
+            <li>Worked on the processing flow for security playbooks, which define the steps an agent should run on a target machine.</li>
+            <li>Implemented execution checks for operating system compatibility, required privileges, and human approval.</li>
+            <li>Contributed to command output logging, timeout handling, and automatic rollback support for failed actions.</li>
+          </ul>
+          <ul data-tr>
+            <li>Bir ajanın hedef makinede çalıştıracağı adımları tanımlayan güvenlik playbook'larının işlenme süreci üzerinde çalıştım.</li>
+            <li>Çalıştırma öncesinde işletim sistemi uyumluluğu, gerekli yetkiler ve insan onayı kontrollerini geliştirdim.</li>
+            <li>Komut çıktılarının kaydedilmesi, zaman aşımı yönetimi ve başarısız aksiyonlar için otomatik geri alma desteğine katkı sağladım.</li>
+          </ul>
+        </div>
+      </div>
+
+    </article>
+
+    <article class="project">
+      <div class="project-top">
+        <div>
+          <h2 class="project-title">Hypothetica</h2>
+          <div class="project-meta" data-en>Multi-agent RAG pipeline for evidence-backed idea novelty analysis.</div>
+          <div class="project-meta" data-tr>Kanıt destekli fikir özgünlüğü analizi için çok ajanlı RAG pipeline.</div>
+          <div class="project-stack">Python · FAISS · ChromaDB · embeddings · layered retrieval · reranking · similarity scoring</div>
+        </div>
+        <div class="repo-links">
+          <a class="repo-link" href="https://github.com/HarunHudaiTan/Hypothetica" target="_blank">Source</a>
+          <a class="repo-link" href="https://ieeexplore.ieee.org/abstract/document/11418474" target="_blank">Paper</a>
+        </div>
+      </div>
+
+      <div class="project-grid">
+        <div class="detail">
+          <div class="detail-label">
+            <span data-en>Built</span>
+            <span data-tr>Geliştirdiğim Kısım</span>
+          </div>
+          <p data-en>Designed the agent pipeline for retrieving related work, reranking candidates, extracting evidence, and producing similarity scores across papers, repositories, and patents.</p>
+          <p data-tr>Makale, açık kaynak proje ve patentler üzerinde ilgili çalışmaları getiren, adayları yeniden sıralayan, kanıt çıkaran ve benzerlik puanı üreten ajan pipeline'ını tasarladım.</p>
+        </div>
+        <div class="detail">
+          <div class="detail-label">
+            <span data-en>Technical Highlights</span>
+            <span data-tr>Teknik Detaylar</span>
+          </div>
+          <ul data-en>
+            <li>FAISS and ChromaDB retrieval over vectorized research sources.</li>
+            <li>Layered retrieval and reranking to improve candidate quality.</li>
+            <li>Separate evidence extraction and similarity scoring stages.</li>
+          </ul>
+          <ul data-tr>
+            <li>Vektörleştirilmiş araştırma kaynakları üzerinde FAISS ve ChromaDB retrieval.</li>
+            <li>Aday kalitesini artırmak için katmanlı retrieval ve reranking.</li>
+            <li>Ayrı kanıt çıkarımı ve benzerlik puanlama aşamaları.</li>
+          </ul>
+        </div>
+      </div>
+
+    </article>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="section" id="publications">
     <div class="section-label">
       <span data-en>Publications</span>
       <span data-tr>Yayınlar</span>
@@ -455,66 +655,33 @@
         <span data-en><strong>Harun Hüdai Tan</strong>, Ahmet Alp Malkoç, Kutay Becerir, Baran Erol, Murat Karakaya</span>
         <span data-tr><strong>Harun Hüdai Tan</strong>, Ahmet Alp Malkoç, Kutay Becerir, Baran Erol, Murat Karakaya</span>
       </div>
-      <div class="pub-meta" style="color:#555;">
+      <div class="pub-meta">
         <span data-en>IEEE IISEC 2026 · Feb 2026</span>
         <span data-tr>IEEE IISEC 2026 · Şub 2026</span>
       </div>
       <a class="pub-link" href="https://ieeexplore.ieee.org/abstract/document/11418474" target="_blank">
-        <span data-en>IEEE Xplore →</span>
-        <span data-tr>IEEE Xplore →</span>
+        <span data-en>IEEE Xplore</span>
+        <span data-tr>IEEE Xplore</span>
       </a>
     </div>
 
     <div class="pub">
       <div class="pub-title">AI-Powered Regional Cost of Living Advisor for Turkey</div>
       <div class="pub-meta"><strong>Harun Hüdai Tan</strong>, Kasım Murat Karakaya, Ahmet Arda Bağdatlı, Baran Erol, Hüseyin Yiğit Erten</div>
-      <div class="pub-meta" style="color:#555;">
+      <div class="pub-meta">
         <span data-en>UBMK 2025 · Sep 2025</span>
         <span data-tr>UBMK 2025 · Eyl 2025</span>
       </div>
       <a class="pub-link" href="https://ieeexplore.ieee.org/abstract/document/11206933" target="_blank">
-        <span data-en>IEEE Xplore →</span>
-        <span data-tr>IEEE Xplore →</span>
+        <span data-en>IEEE Xplore</span>
+        <span data-tr>IEEE Xplore</span>
       </a>
     </div>
-  </div>
+  </section>
 
   <div class="divider"></div>
 
-  <!-- PROJECTS -->
-  <div class="section" id="projects">
-    <div class="section-label">
-      <span data-en>Projects</span>
-      <span data-tr>Projeler</span>
-    </div>
-
-    <div class="item">
-      <div class="item-header">
-        <div class="item-title" style="margin-bottom:4px;">Opservant Spark</div>
-        <div class="item-date">
-          <a href="https://github.com/s4e-io/opservant-spark" target="_blank" style="color:#909090; font-size:14px;">GitHub →</a>
-        </div>
-      </div>
-      <div class="item-desc" data-en>Safe execution layer between AI decisions and real infrastructure, built at s4e.io. I designed the cross-platform Go agent architecture and implemented the secure playbook execution pipeline with privilege validation, injection protection, and automatic rollback. Also ships with <a href="https://github.com/s4e-io/opservant-playbooks" target="_blank" style="color:#909090; border-bottom: 1px solid #444; padding-bottom:1px;">opservant-playbooks</a>, a community library of 100+ security playbooks.</div>
-      <div class="item-desc" data-tr>s4e.io bünyesinde geliştirilen, yapay zeka kararları ile gerçek sistemler arasında güvenli bir yürütme katmanı. Çapraz platform Go ajan mimarisini tasarladım ve yetki kontrolü, komut enjeksiyonuna karşı koruma ve otomatik geri alma özelliklerine sahip güvenli bir playbook yürütme altyapısı geliştirdim. Ayrıca 100'den fazla güvenlik playbook'u içeren topluluk kütüphanesi <a href="https://github.com/s4e-io/opservant-playbooks" target="_blank" style="color:#909090; border-bottom: 1px solid #444; padding-bottom:1px;">opservant-playbooks</a> ile birlikte sunulmaktadır.</div>
-    </div>
-
-    <div class="item">
-      <div class="item-header">
-        <div class="item-title" style="margin-bottom:4px;">Hypothetica</div>
-        <div class="item-date">
-          <a href="https://github.com/HarunHudaiTan/Hypothetica" target="_blank" style="color:#909090; font-size:14px;">GitHub →</a>
-        </div>
-      </div>
-      <div class="item-desc" data-en>Evaluates the originality of research ideas against academic papers, open source projects, and patents. Designed the multi-agent system and built the scoring logic that evaluates research originality across three tiers. Published at IEEE IISEC 2026.</div>
-      <div class="item-desc" data-tr>Araştırma fikirlerinin özgünlüğünü akademik yayınlar, açık kaynak projeler ve patentler üzerinden analiz eden bir sistem. Çok ajanlı mimariyi tasarladım ve özgünlük değerlendirmesini farklı katmanlarda yapan puanlama sistemini geliştirdim. Çalışma IEEE IISEC 2026 kapsamında yayımlandı.</div>
-    </div>
-  </div>
-
-  <div class="divider"></div>
-
-  <!-- EDUCATION -->
-  <div class="section" id="education">
+  <section class="section" id="education">
     <div class="section-label">
       <span data-en>Education</span>
       <span data-tr>Eğitim</span>
@@ -527,15 +694,14 @@
           <span data-tr>Yazılım Mühendisliği Lisans · %100 İngilizce · Ankara</span>
         </div>
       </div>
-      <div class="item-date">2022 – 2026</div>
+      <div class="item-date">2022 - 2026</div>
     </div>
-  </div>
+  </section>
 
-  <!-- FOOTER -->
-  <div class="footer">
-    <span>Harun Hüdai Tan · 2026</span>
+  <footer class="footer">
+    <span>Harun Hüdai Tan</span>
     <a href="mailto:harunhudaitan@gmail.com">harunhudaitan@gmail.com</a>
-  </div>
+  </footer>
 
 </div>
 
