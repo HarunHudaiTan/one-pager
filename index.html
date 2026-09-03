@@ -456,13 +456,13 @@
         <span data-tr>Yazılım Mühendisi</span>
       </div>
       <h1 class="name">Harun Hüdai Tan</h1>
-      <div class="bio" data-en>Software engineer focused on full-stack development, AI-powered applications, automation tooling, and distributed systems.</div>
-      <div class="bio" data-tr>Full-stack geliştirme, yapay zeka destekli uygulamalar ve otomasyon araçları üzerine çalışan yazılım mühendisi.</div>
+      <div class="bio" data-en>Software engineer focused on security automation, infrastructure tooling and backend systems.</div>
+      <div class="bio" data-tr>Güvenlik otomasyonu, altyapı araçları ve backend sistemleri üzerine çalışan yazılım mühendisi.</div>
       <p class="about-text" data-en>
-        I am a software engineer working on full-stack applications, backend systems, data retrieval, and AI integrations. I have built agent-based tools and product features across frontend and backend. I focus on turning ideas into clear, maintainable, and reliable software systems.
+        I build automation agents and backend systems, with hands-on experience in Go, Linux and container tooling. I graduated from TED University (B.Sc. Software Engineering, 2026) and I'm currently interested in Cloud &amp; DevOps roles where automation and security overlap.
       </p>
       <p class="about-text" data-tr>
-        Full-stack uygulamalar, backend servisleri ve yapay zeka entegrasyonları geliştiriyorum. Backend ve frontend tarafını kapsayan ürün özellikleri ve ajan tabanlı araçlar üzerinde çalıştım. Özellikle güvenilir ve sürdürülebilir yazılım sistemleri geliştirmeye odaklanıyorum.
+        Otomasyon ajanları ve backend sistemleri geliştiriyorum; Go, Linux ve konteyner araçlarıyla pratik deneyimim var. TED Üniversitesi Yazılım Mühendisliği bölümünden 2026'da mezun oldum. Otomasyon ile güvenliğin kesiştiği Cloud &amp; DevOps rolleriyle ilgileniyorum.
       </p>
       <div class="links">
         <a href="mailto:harunhudaitan@gmail.com">harunhudaitan@gmail.com</a>
@@ -500,14 +500,18 @@
         <span data-tr>Yazılım Mühendisi Stajyeri</span>
       </div>
       <div class="item-desc" data-en>
-        I worked on Opservant, a security automation platform that turns incoming security findings into executable response workflows (playbooks) and executes AI-powered autonomous actions in a controlled and auditable way.
-        <br><br>
-        I contributed to multiple parts of the platform, including both full-stack development and execution infrastructure. I worked on Spark, the cross-platform Go-based playbook execution agent running on macOS, Linux, and Windows, as well as backend and platform components responsible for playbook and agent management and communication between the management layer and execution agents. I also worked on human-in-the-loop execution workflows.
+        <ul style="padding-left:18px;line-height:1.75">
+          <li>Contributed to <a class="inline-link" href="https://github.com/s4e-io/opservant-spark" target="_blank">Spark</a>, a Go agent that automates security hardening and config tasks on Linux, macOS and Windows hosts. Worked on playbook parsing, execution lifecycle and per-action state tracking.</li>
+          <li>Added pre-execution safety checks, human approval gates, structured logs and failure recovery so unattended runs can be audited and rolled back.</li>
+          <li>Wrote and tested 100+ playbooks (<a class="inline-link" href="https://github.com/s4e-io/opservant-playbooks" target="_blank">opservant-playbooks</a>) for OS hardening, service configuration and maintenance, tested against all three platforms.</li>
+        </ul>
       </div>
       <div class="item-desc" data-tr>
-        Opservant üzerinde çalıştım. Opservant, sistemlerden gelen güvenlik bulgularını çalıştırılabilir müdahale senaryolarına (playbook) dönüştürerek yapay zeka destekli otonom aksiyonların kontrollü ve izlenebilir şekilde uygulanmasını sağlayan bir güvenlik otomasyon platformudur.
-        <br><br>
-        Platformun farklı bileşenlerinde hem full-stack geliştirme hem de yürütme altyapısı tarafında çalışmalar yaptım. macOS, Linux ve Windows üzerinde çalışan Spark isimli Go tabanlı playbook yürütme ajanı üzerinde çalışmanın yanı sıra, playbook ve ajan yönetimi ile yönetim katmanı ve yürütme ajanları arasındaki iletişimi sağlayan backend ve platform bileşenlerinin geliştirilmesine katkı sağladım. Ayrıca human-in-the-loop yürütme süreçleri üzerinde çalıştım.
+        <ul style="padding-left:18px;line-height:1.75">
+          <li>Linux, macOS ve Windows makinelerde güvenlik sertleştirme ve yapılandırma görevlerini otomatikleştiren Go ajanı <a class="inline-link" href="https://github.com/s4e-io/opservant-spark" target="_blank">Spark</a>'a katkı sağladım. Playbook ayrıştırma, yürütme yaşam döngüsü ve aksiyon bazlı durum takibi üzerinde çalıştım.</li>
+          <li>İzlemsiz çalıştırmaların denetlenebilir ve geri alınabilir olması için ön yürütme güvenlik kontrolleri, insan onayı kapıları, yapılandırılmış günlükler ve hata kurtarma mekanizmaları ekledim.</li>
+          <li>Linux, macOS ve Windows platformlarında test edilmiş, işletim sistemi sertleştirme, servis yapılandırması ve bakım konularında 100'den fazla playbook (<a class="inline-link" href="https://github.com/s4e-io/opservant-playbooks" target="_blank">opservant-playbooks</a>) yazdım ve test ettim.</li>
+        </ul>
       </div>
     </div>
 
@@ -560,7 +564,7 @@
           <h2 class="project-title">Opservant Spark</h2>
           <div class="project-meta" data-en>Open-source Go-based agent for running security playbooks that define the actions to run on target machines.</div>
           <div class="project-meta" data-tr>Uygulanacak müdahale adımlarını tanımlayan güvenlik playbook'larını hedef makinelerde çalıştıran açık kaynak Go tabanlı ajan.</div>
-          <div class="project-stack">Go · structured remediation workflows · approval gates · command validation · audit logging · rollback</div>
+          <div class="project-stack">Go · Linux · Docker · playbook execution · approval gates · rollback · structured logging</div>
         </div>
         <div class="repo-links">
           <a class="repo-link" href="https://github.com/s4e-io/opservant-spark" target="_blank">Source</a>
@@ -574,8 +578,8 @@
             <span data-en>Built</span>
             <span data-tr>Geliştirdiğim Kısım</span>
           </div>
-          <p data-en>Built parts of the execution layer that checks whether playbooks are safe to run, executes them on target machines, records the results, and rolls back failed actions when needed.</p>
-          <p data-tr>Playbook'ların güvenli şekilde çalıştırılıp çalıştırılamayacağını kontrol eden, onları hedef makinelerde çalıştıran, sonuçları kaydeden ve gerektiğinde başarısız aksiyonları geri alan yürütme katmanı bileşenleri geliştirdim.</p>
+          <p data-en>Built parts of the execution layer that checks whether playbooks are safe to run, executes them on target machines, records the results, and rolls back failed actions when needed. Also wrote and tested 100+ playbooks in <a class="inline-link" href="https://github.com/s4e-io/opservant-playbooks" target="_blank">opservant-playbooks</a> across Linux, macOS and Windows.</p>
+          <p data-tr>Playbook'ların güvenli şekilde çalıştırılıp çalıştırılamayacağını kontrol eden, onları hedef makinelerde çalıştıran, sonuçları kaydeden ve gerektiğinde başarısız aksiyonları geri alan yürütme katmanı bileşenleri geliştirdim. Ayrıca Linux, macOS ve Windows genelinde <a class="inline-link" href="https://github.com/s4e-io/opservant-playbooks" target="_blank">opservant-playbooks</a> içinde 100'den fazla playbook yazdım ve test ettim.</p>
         </div>
         <div class="detail">
           <div class="detail-label">
@@ -666,8 +670,8 @@
     </div>
 
     <div class="pub">
-      <div class="pub-title">AI-Powered Regional Cost of Living Advisor for Turkey</div>
-      <div class="pub-meta"><strong>Harun Hüdai Tan</strong>, Kasım Murat Karakaya, Ahmet Arda Bağdatlı, Baran Erol, Hüseyin Yiğit Erten</div>
+      <div class="pub-title">AI-Based Domestic Relocation Assistant for Türkiye</div>
+      <div class="pub-meta"><strong>Harun Hüdai Tan</strong>, Baran Erol, Hüseyin Yiğit Erten, Ahmet Arda Bağdatlı, Kasım Murat Karakaya</div>
       <div class="pub-meta">
         <span data-en>UBMK 2025 · Sep 2025</span>
         <span data-tr>UBMK 2025 · Eyl 2025</span>
@@ -690,11 +694,11 @@
       <div>
         <div class="edu-title">TED University</div>
         <div class="edu-sub">
-          <span data-en>B.Sc. Software Engineering · 100% English · Ankara</span>
-          <span data-tr>Yazılım Mühendisliği Lisans · %100 İngilizce · Ankara</span>
+          <span data-en>B.Sc. Software Engineering · 100% English · Ankara · Graduated</span>
+          <span data-tr>Yazılım Mühendisliği Lisans · %100 İngilizce · Ankara · Mezun</span>
         </div>
       </div>
-      <div class="item-date">2022 - 2026</div>
+      <div class="item-date">Sep 2022 – Jul 2026</div>
     </div>
   </section>
 
